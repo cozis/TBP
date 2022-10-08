@@ -1,3 +1,5 @@
 Questa repository implementa un'architettura di rete neurale capace di determinare se un video è stato manomesso con tecnologie di deep-fake. È un progetto realizzato per il corso di Elaborazione di Segnali Multimediali tenuto all'università degli studi di Napoli Federico II.
 
 Per effettuare la classificazione tra video manomessi o meno, il problema è ricondotto ad una classificazione di immagini applicata ai singoli frame (ad un sottoinsieme dei frame, per la precisione).
+
+L'architettura raggiunge un'accuratezza di ~95%, ed è ottenuta mediante la serie di ResNet-60 e due livelli densi di neuroni. Il penultimo livello denso è composto da 3000 neuroni seguiti dalla funzione di attivazione Leady-ReLU, mentre l'ultimo ha 2 neuroni (uno per ciascuna classe legata alla classificazione) seguiti dalla funzione SoftMax. Il risultato finale è stato ottenuto mediante un lungo processo iterativo di ottimizzazione degli hyper-parametri documentato in `docs/risultati.xlsx` e `docs/DNN for deep-fake recognition.pdf`).
